@@ -2,7 +2,7 @@ package network
 
 import (
 	"github.com/Snooowgh/consensusPBFT/pbft/consensus"
-	"github.com/Snooowgh/consensusPBFT/pbft/status"
+	// "github.com/Snooowgh/consensusPBFT/pbft/status"
 	"encoding/json"
 	"fmt"
 	"time"
@@ -122,14 +122,6 @@ func (node *Node) Reply(msg *consensus.ReplyMsg) error {
 	return nil
 }
 
-func (node *Node) SendStatus(msg *status.StatusMsg) error {
-	jsonMsg, err := json.Marshal(msg)
-	if err != nil {
-		return err
-	}
-
-	
-}
 
 // GetReq can be called when the node's CurrentState is nil.
 // Consensus start procedure for the Primary.
